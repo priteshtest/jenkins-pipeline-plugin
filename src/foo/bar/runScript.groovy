@@ -1,5 +1,5 @@
 package foo.bar;
 
-def runTestScript(repo) {
-  sh "echo ${args}"
+def call(repo) {
+  sh "echo ${repo}"
 }
