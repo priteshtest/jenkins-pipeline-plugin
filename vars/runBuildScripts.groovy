@@ -7,10 +7,10 @@ def call(bodyBlock) {
   bodyBlock.delegate = config
   bodyBlock()
   final String myTests = config.test_script
-  if(myTests == 'noop'){
-    stage('Run Tests') {
+  stage('Run Tests') {
+      steps {
         sh 'echo "Run Test Script"'
         println(myTests)
-    }
-  }   
+      }
+  }
 }
