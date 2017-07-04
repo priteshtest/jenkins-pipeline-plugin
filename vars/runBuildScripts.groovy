@@ -7,12 +7,10 @@ def call(bodyBlock) {
   bodyBlock.delegate = config
   bodyBlock()
   final String myTests = config.test_script
-  stages {
-        stage('Run Tests') {
-            steps {
-              sh 'echo "Run Test Script"'
-              println(myTests)
-            }
-        }
-   }
+
+  steps {
+    sh 'echo "Run Test Script"'
+    println(myTests)
+  }
+
 }
