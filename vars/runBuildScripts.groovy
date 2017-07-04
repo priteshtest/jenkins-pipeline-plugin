@@ -8,9 +8,9 @@ def call(bodyBlock) {
   bodyBlock()
   final String myTests = config.test_script
 
-  steps {
+
     sh 'echo "Run Test Script"'
     println(myTests)
-  }
+
 
 }
