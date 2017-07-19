@@ -1,3 +1,4 @@
+@NonCPS
 def call(configMap) {
     if (configMap == null) {
         configMap = [:]
@@ -19,4 +20,5 @@ def call(configMap) {
 	job = Jenkins.instance.getItemByFullName(newJobName+"/master")
 	job.nextBuildNumber = nextBuildNumber
 	job.saveNextBuildNumber()
+	return true
 }
