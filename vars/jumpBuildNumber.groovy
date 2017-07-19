@@ -19,5 +19,4 @@ def call(configMap) {
 	job = Jenkins.instance.getItemByFullName(newJobName+"/master")
 	job.nextBuildNumber = nextBuildNumber
 	job.saveNextBuildNumber()
-
-
+}
